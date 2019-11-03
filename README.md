@@ -1,24 +1,5 @@
-# README
+# URL Lengthener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Kind of like a URL shortener.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+CSS provided by [Tacit](https://yegor256.github.io/tacit/) under the [MIT License](https://github.com/yegor256/tacit/blob/master/LICENSE).
