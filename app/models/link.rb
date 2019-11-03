@@ -6,6 +6,6 @@ class Link < ApplicationRecord
   private
 
     def ensure_slug
-      self.slug ||= SecureRandom::urlsafe_base64
+      self.slug ||= SecureRandom::alphanumeric 2000
     end
 end
