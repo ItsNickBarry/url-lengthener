@@ -1,7 +1,7 @@
 class Link < ApplicationRecord
   before_validation :ensure_slug
   validates :url, :slug, presence: true, uniqueness: true
-  validates_format_of :url, :with => URI::regexp(%w(http https))
+  validates_format_of :url, with: URI::regexp(%w(http https))
 
   private
 

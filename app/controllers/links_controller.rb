@@ -7,9 +7,11 @@ class LinksController < ApplicationController
     @link = Link.find_or_initialize_by link_params
 
     if @link.persisted? || @link.save
-      redirect_to root_path, notice: "URL #{ @link.url } lengthened to #{ root_url }links/#{ @link.slug }"
+      flash.now.notice = "URL #{ @link.url } lengthened to #{ root_url }#{ @link.slug }"
+      render :new
     else
-      redirect_to root_path, notice: "Invalid URL: #{ @link.url }"
+      flash.now.notice = "Invalid URL: #{ @link.url }"
+      render :new
     end
   end
 
@@ -18,7 +20,8 @@ class LinksController < ApplicationController
     if @link
       redirect_to @link.url
     else
-      redirect_to root_path, notice: "Slug not found: #{ params[:slug] }"
+      flash.now.notice = "Slug not found: #{ params[:slug] }"
+      render :new
     end
   end
 
